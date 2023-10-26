@@ -1,0 +1,213 @@
+.crito-2 .content .partnership-brands {
+  padding-top: 2vw;
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partnership-brands {
+    padding: 2vw 0 5vw 0;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+  .crito-2 .content .partnership-brands {
+    padding: 3vw 0 3vw 0;
+  }
+}
+@media (min-width: 992px) and (min-width: 1600px) {
+  .crito-2 .content .partnership-brands {
+    padding: 2vw 0 2vw 0;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partnership-brands::before {
+    display: none;
+  }
+  .crito-2 .content .partnership-brands::after {
+    display: none;
+  }
+}
+.crito-2 .content .partnership-brands img {
+  width: 30%;
+}
+@media (min-width: 768px) {
+  .crito-2 .content .partnership-brands img {
+    width: 15%;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partnership-brands img {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-2 .content .partnership-brands img {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partner-border {
+    padding: 5vw 6.25vw 7vw;
+    max-width: 95vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partnership-border {
+    padding: 0vw;
+    padding-top: 0;
+  }
+}
+.crito-2 .content .partnership-section {
+  padding: 5vw;
+}
+@media (min-width: 768px) {
+  .crito-2 .content .partnership-section {
+    padding: 4vw 4vw 4vw 4vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .partnership-section {
+    display: flex;
+    margin: auto;
+    padding: 2vw;
+    max-width: 95vw;
+    border: 1px solid #DAD9D3;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .textarea-left {
+    text-align: left;
+    width: 40%;
+    padding: 2vw;
+  }
+}
+@media (min-width: 1600px) {
+  .crito-2 .content .textarea-left {
+    width: 50%;
+  }
+}
+.crito-2 .content .textarea-left .center-button-group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .crito-2 .content .textarea-left .center-button-group {
+    width: 50%;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .textarea-left .center-button-group {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.crito-2 .content .textarea-right {
+  padding-top: 10vw;
+}
+@media (min-width: 768px) {
+  .crito-2 .content .textarea-right {
+    padding: 5vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .textarea-right {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2vw;
+    width: 75%;
+    text-align: left;
+  }
+}
+.crito-2 .content .textarea-right h3 {
+  font-size: 4vw;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .crito-2 .content .textarea-right h3 {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .content .textarea-right h3 {
+    font-size: 1.85vw;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-2 .content .textarea-right h3 {
+    font-size: 16px;
+  }
+}
+.crito-2 .content .textarea-right p {
+  color: #191919;
+}
+.crito-2 .content .textarea-right .partnership-section-card {
+  padding: 2vw 2vw;
+}
+@media (min-width: 992px) {
+  .crito-2 .content .textarea-right .partnership-section-card {
+    padding: 2.5vw 1.875vw;
+    text-align: left;
+  }
+}
+.crito-2 .content .textarea-right .partnership-section-card svg {
+  height: 2.5vw;
+  width: 2.5vw;
+  padding-bottom: 1.5vw;
+}
+.crito-2 .partnership-section-mobile {
+  display: flex;
+  padding: 5vw 0vw;
+}
+@media (min-width: 768px) {
+  .crito-2 .partnership-section-mobile {
+    padding: 2vw 0vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .partnership-section-mobile {
+    display: block;
+    padding: 1vw 1vw;
+  }
+}
+.crito-2 .partnership-section-left {
+  border: 1px solid #DAD9D3;
+  padding: 5vw;
+}
+@media (min-width: 992px) {
+  .crito-2 .partnership-section-left {
+    border: none;
+    padding: 2vw;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-2 .partnership-section-left {
+    padding: 5vw;
+  }
+}
+.crito-2 .partnership-section-left .center-button-group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.crito-2 .partnership-section-left .btn-yellow {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .crito-2 .partnership-section-left .btn-yellow {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .crito-2 .partnership-section-left .btn-yellow {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-2 .partnership-section-left .btn-yellow {
+    width: 70%;
+  }
+}

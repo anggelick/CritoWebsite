@@ -1,0 +1,132 @@
+.crito-1 {
+  background: #F0EFE9;
+  position: relative;
+}
+.crito-1 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .crito-1 .container {
+    display: flex;
+    flex-direction: space-between;
+  }
+}
+@media (min-width: 992px) {
+  .crito-1 .container {
+    flex-direction: row;
+  }
+}
+.crito-1 .container .content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  z-index: 1;
+}
+@media (min-width: 992px) {
+  .crito-1 .container .content {
+    text-align: left;
+    padding: 0;
+  }
+}
+.crito-1 .container .content a {
+  margin-right: 0px;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .crito-1 .container .content a {
+    width: 50%;
+    margin: 2vw auto 2vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-1 .container .content a {
+    display: unset;
+    margin-right: 10px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-1 .container .content a {
+    width: 50%;
+    margin: 2vw 1vw 2vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-1 .container .content .text-area {
+    margin-top: -10vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-1 .container p {
+    padding: 3vw 0;
+    padding-bottom: 5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-1 .container p {
+    padding: 2vw 0;
+    padding-bottom: 5vw;
+  }
+}
+@media (min-width: 1600px) {
+  .crito-1 .container p {
+    padding: 1vw 0;
+    padding-bottom: 3vw;
+  }
+}
+.crito-1 img {
+  display: none;
+  margin-right: -50px;
+}
+@media (min-width: 992px) {
+  .crito-1 img {
+    display: block;
+    margin-right: -100px;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-1 img {
+    margin-right: -50px;
+  }
+}
+.crito-1 .header-picture2 {
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+@media (min-width: 768px) {
+  .crito-1 .header-picture2 {
+    top: 10%;
+  }
+}
+@media (min-width: 992px) {
+  .crito-1 .header-picture2 {
+    top: 82%;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-1 .header-picture2 {
+    top: 72%;
+  }
+}
+@media (min-width: 1600px) {
+  .crito-1 .header-picture2 {
+    top: 72%;
+  }
+}
+.crito-1 .header-picture2 img {
+  width: 70%;
+}
+@media (min-width: 992px) {
+  .crito-1 .header-picture2 img {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-1 .header-picture2 img {
+    width: 100%;
+  }
+}

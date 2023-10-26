@@ -1,0 +1,153 @@
+
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-1 {
+    background: #F0EFE9;
+    position: relative;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond-from("sm") {
+        display: flex;
+        flex-direction: space-between;
+      }
+
+      @include respond-from("md") {
+        flex-direction: row;
+      }
+
+      .content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+        z-index: 1;
+
+        @include respond-from("md") {
+          text-align: left;
+          padding: 0;
+        }
+
+        a {
+          margin-right: 0px;
+          display: block;
+          margin-bottom: 20px;
+
+          @include respond-from("sm") {
+            width: 50%;
+            margin: 2vw auto 2vw;
+          }
+
+          @include respond-from("md") {
+            display: unset;
+            margin-right: 10px;
+            margin: auto;
+          }
+
+          @include respond-from("lg") {
+            width: 50%;
+            margin: 2vw 1vw 2vw;
+          }
+        }
+
+        .text-area {
+          @include respond-from("md") {
+            margin-top: -10vw;
+          }
+        }
+      }
+
+      p {
+        @include respond-from("md") {
+          padding: 3vw 0;
+          padding-bottom: 5vw;
+        }
+
+        @include respond-from("lg") {
+          padding: 2vw 0;
+          padding-bottom: 5vw;
+        }
+
+        @include respond-from("xl") {
+          padding: 1vw 0;
+          padding-bottom: 3vw;
+        }
+      }
+
+
+    }
+
+    img {
+      display: none;
+      margin-right: -50px;
+
+      @include respond-from("md") {
+        display: block;
+        margin-right: -100px;
+      }
+
+      @include respond-from("lg") {
+        margin-right: -50px;
+      }
+    }
+
+    .header-picture2 {
+      position: absolute;
+      top: 15%;
+      left: 0;
+
+      @include respond-from("sm") {
+        top: 10%;
+      }
+
+      @include respond-from("md") {
+        top: 82%;
+      }
+
+      @include respond-from("lg") {
+        top: 72%;
+      }
+
+      @include respond-from("xl") {
+        top: 72%;
+      }
+
+      img {
+        width: 70%;
+
+        @include respond-from("md") {
+          width: 80%;
+        }
+
+        @include respond-from("lg") {
+          width: 100%;
+        }
+      }
+    }
+  }

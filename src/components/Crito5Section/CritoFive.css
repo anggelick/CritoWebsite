@@ -1,0 +1,144 @@
+.crito-5 {
+  padding-top: 10vw;
+  padding-bottom: 0vw;
+}
+@media (min-width: 768px) {
+  .crito-5 {
+    padding-top: 5vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-5 {
+    padding-bottom: 5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-5 {
+    padding-top: 75px;
+    padding-bottom: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .crito-5 .flex-section {
+    display: flex;
+  }
+}
+.crito-5 .flex-section .picture {
+  background-color: #F0EFE9;
+  padding: 5vw;
+}
+@media (min-width: 992px) {
+  .crito-5 .flex-section .picture {
+    width: 50%;
+    padding: 0;
+    background-color: transparent;
+    margin-top: -12vw;
+  }
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+  .crito-5 .flex-section .picture {
+    margin-top: -10vw;
+  }
+}
+.crito-5 .flex-section .picture .picture-background {
+  background-color: #F0EFE9;
+}
+@media (min-width: 992px) {
+  .crito-5 .flex-section .picture .picture-background {
+    background-color: #F0EFE9;
+    padding: 17vw;
+    margin-left: -5vw;
+    margin-top: -22vw;
+    margin-right: -9vw;
+    position: relative;
+    z-index: -1;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-5 .flex-section .picture .picture-background {
+    margin-left: -5vw;
+    margin-top: -20vw;
+    margin-right: -12vw;
+    padding: 13vw;
+  }
+}
+@media (min-width: 1600px) {
+  .crito-5 .flex-section .picture .picture-background {
+    margin-left: -5vw;
+    margin-top: -19vw;
+    margin-right: -25vw;
+    padding: 12vw;
+  }
+}
+@media (min-width: 1920px) {
+  .crito-5 .flex-section .picture .picture-background {
+    margin-left: -4vw;
+    margin-top: -9vw;
+    margin-right: -30vw;
+    padding: 8vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-5 .four-things-group {
+    width: 50%;
+  }
+}
+.crito-5 .four-things-group .one-thing {
+  padding: 2vw;
+}
+@media (min-width: 992px) {
+  .crito-5 .four-things-group .one-thing {
+    padding: 0;
+  }
+}
+.crito-5 .four-things-group .one-thing h3 {
+  font-size: 4vw;
+  font-weight: 700;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .crito-5 .four-things-group .one-thing h3 {
+    font-size: 3vw;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .crito-5 .four-things-group .one-thing h3 {
+    font-size: 1.85vw;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-5 .four-things-group .one-thing h3 {
+    font-size: 16px;
+  }
+}
+.crito-5 .four-things-group .one-thing p {
+  padding: 0;
+  color: #191919;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .crito-5 .four-things-group .one-thing p {
+    margin-left: 60px;
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .crito-5 .four-things-group .one-thing p {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-5 .four-things-group .one-thing p {
+    margin-left: 50px;
+  }
+}
+.crito-5 .four-things-group i {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

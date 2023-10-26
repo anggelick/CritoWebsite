@@ -1,0 +1,129 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-6 {
+    .container {
+      .text-area {
+        padding-top: 50px;
+        padding-bottom: 20px;
+
+        @include respond-from("sm") {
+          padding-top: 80px;
+        }
+
+        h5 {
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center;
+        }
+      }
+
+      .project-and-cases {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        @include respond-from("sm") {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .project {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr auto;
+          color: #191919;
+          text-decoration: none;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+          h3 {
+            font-size: 4vw;
+            font-weight: 700;
+            padding-top: 35px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #DAD9D3;
+            text-align: center;
+
+            @include respond-from("sm") {
+              font-size: 3vw;
+            }
+
+            @include respond-from("md") {
+              font-size: 1.85vw;
+              text-align: left;
+            }
+
+            @include respond-from("lg") {
+              font-size: 16px;
+            }
+          }
+
+          .readmore {
+            font-family: 'Inter', sans-serif;
+            display: block;
+            text-align: right;
+            font-size: 14px;
+            font-weight: 500;
+            color: #191919;
+            text-decoration: none;
+            padding: 15px;
+          }
+
+          i {
+            margin-left: 3px;
+          }
+
+          &:hover .readmore {
+            text-decoration: underline;
+          }
+
+        }
+      }
+
+      .center-button-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vw;
+        padding-bottom: 15vw;
+
+        @include respond-from("sm") {
+          padding-top: 5vw;
+          padding-bottom: 10vw;
+        }
+
+        @include respond-from("md") {
+          padding-top: 5vw;
+          padding-bottom: 5vw;
+        }
+      }
+    }
+  }

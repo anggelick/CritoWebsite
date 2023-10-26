@@ -1,0 +1,227 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+.crito-4 {
+    position: relative;
+    background-color: #F0EFE9;
+    padding-top: 10vw;
+    padding-bottom: 20vw;
+
+    @include respond-from("sm") {
+      padding-top: 5vw;
+      padding-bottom: 5vw;
+    }
+
+    @include respond-from("md") {
+      padding-bottom: 5vw;
+    }
+
+    @include respond-from("lg") {
+      padding-top: 75px;
+      padding-bottom: 15px;
+    }
+
+    .our-services-boxes {
+      background: #fff;
+
+      @include respond-from("sm") {
+        background: none;
+      }
+
+      @include respond-from("md") {
+        display: flex;
+      }
+
+      .gallery-cell {
+        width: 100%;
+        height: 400px;
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5vw;
+
+        @include respond-from("sm") {
+          padding: 5vw 15vw;
+        }
+
+        @include respond-from("md") {
+          display: none;
+        }
+      }
+
+      .flickity-button,
+      .flickity-prev-next-button {
+        display: none;
+      }
+
+      .flickity-page-dots {
+        bottom: -35px;
+      }
+    }
+
+    .text-area {
+      @include respond-from("md") {
+        margin: 0px 15px 0px 15px;
+      }
+    }
+
+    h3 {
+      font-size: 4vw;
+      font-weight: 700;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      text-align: center;
+
+      @include respond-from("sm") {
+        font-size: 3vw;
+      }
+
+      @include respond-from("md") {
+        font-size: 1.85vw;
+        text-align: left;
+        margin: 0;
+      }
+
+      @include respond-from("lg") {
+        font-size: 16px;
+      }
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+      @include respond-from("sm") {
+        border: 1px solid #DAD9D3;
+        background: #fff;
+        padding: 10vw;
+      }
+
+      @include respond-from("md") {
+        width: 25%;
+        padding: 3vw;
+        background: #fff;
+        margin: 0px 15px 0px 15px;
+      }
+
+      @include respond-from("lg") {
+        padding: 2vw;
+      }
+
+      @include respond-from("xl") {
+        padding: 1.5vw;
+        padding-top: 0;
+      }
+
+      .round-arrow {
+        text-align: right;
+      }
+
+      .fa-solid {
+        font-size: 10vw;
+        cursor: pointer;
+
+        @include respond-from("sm") {
+          font-size: 5vw;
+        }
+
+        @include respond-from("md") {
+          font-size: 2vw;
+        }
+
+        @include respond-from("lg") {
+          font-size: 45px;
+        }
+
+        &:hover {
+          color: #666666;
+        }
+      }
+    }
+
+    .box2 {
+      @include respond-from("md") {
+        background: #F9D783;
+      }
+    }
+
+    .white {
+      @include respond-from("md") {
+        color: white;
+      }
+    }
+
+    .center-button-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15vw;
+      padding-bottom: 0vw;
+
+      @include respond-from("sm") {
+        padding-top: 10vw;
+        padding-bottom: 5vw;
+      }
+
+      @include respond-from("md") {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+      }
+    }
+
+    .header-background {
+      position: absolute;
+      top: 86.6%;
+
+      @include respond-from("sm") {
+        top: 72.6%;
+      }
+
+      @include respond-from("md") {
+        top: 72.6%;
+        left: 28%;
+      }
+
+      @include respond-from("lg") {
+        top: 73.6%;
+        left: 51%;
+      }
+
+      @include respond-from("xl") {
+        top: 74.6%;
+        left: 59%;
+      }
+
+      @include respond-from("ret") {
+        top: 79.6%;
+        left: 71%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }

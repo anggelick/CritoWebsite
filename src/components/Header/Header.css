@@ -1,0 +1,108 @@
+header {
+  background-color: #F0EFE9;
+  padding: 16px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+@media (min-width: 992px) {
+  header .container {
+    gap: 0px;
+  }
+}
+header .container .menu-bars {
+  font-size: 25px;
+  border: none;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  header .container .menu-bars {
+    display: none;
+  }
+}
+header .container .menu {
+  display: none;
+}
+@media (min-width: 992px) {
+  header .container .menu {
+    display: block;
+  }
+}
+header .container .top-menu {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DAD9D3;
+}
+header .container .contact-information {
+  display: flex;
+}
+header .container .main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+header .container .main-menu nav a {
+  display: inline-block;
+  color: #191919;
+  text-decoration: none;
+  margin-right: 35px;
+  position: relative;
+}
+header .container .main-menu nav a.active {
+  font-weight: 600;
+}
+header .container .main-menu nav a.active::after, header .container .main-menu nav a:hover:after {
+  content: "";
+  font-weight: 500;
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  background-color: #191919;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(calc(50% - 15px));
+}
+header .container .btn-login {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+header .content-box {
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid #DAD9D3;
+}
+header .content-box i {
+  margin-right: 5px;
+  font-size: 3vw;
+}
+@media (min-width: 992px) {
+  header .content-box i {
+    font-size: 1.5vw;
+  }
+}
+@media (min-width: 1200px) {
+  header .content-box i {
+    font-size: 0.9vw;
+  }
+}
+@media (min-width: 1200px) {
+  header .content-box i {
+    font-size: 0.8vw;
+  }
+}
+header .content-box.last {
+  border: none;
+}
+header .social-media a {
+  color: #191919;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+header .social-media a:hover {
+  color: #666666;
+}

@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800;9..40,900&display=swap");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url("https://unpkg.com/flickity@2/dist/flickity.min.css");
+@import url("https://unpkg.com/flickity-fullscreen@1/fullscreen.css");
+
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+html, body{
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #191919;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 900;
+    font-size: 8vw;
+    padding: 4vw;
+    padding-left: 0;
+    margin: 0;
+    line-height: 10vw;
+    text-align: center;
+
+    @include respond-from('sm') {
+      font-size: 5vw;
+      padding: 2vw;
+      padding-bottom: 0;
+      padding-left: 0;
+      line-height: 7vw;
+    }
+
+    @include respond-from('md') {
+      font-size: 4vw;
+      line-height: 4vw;
+      text-align: left;
+    }
+
+    @include respond-from('lg') {
+      font-size: 3.5vw;
+      line-height: 5vw;
+    }
+
+    @include respond-from('xl') {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    @include respond-from('ret') {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+
+  h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    padding-bottom: 5vw;
+    text-align: left;
+    margin-top: 0;
+
+    @include respond-from("sm") {
+      padding-bottom: 2vw;
+      text-align: center;
+    }
+
+    @include respond-from("md") {
+      padding-bottom: 2vw;
+      font-size: 25px;
+      line-height: 35px;
+      text-align: left;
+
+    }
+
+    @include respond-from("lg") {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h5 {
+    color: #F94D1C;
+    font-size: 12px;
+    padding-bottom: 1vw;
+    font-weight: 600;
+    text-align: left;
+
+    @include respond-from("sm") {
+      text-align: center;
+    }
+
+    @include respond-from("md") {
+      text-align: left;
+    }
+
+    @include respond-from("lg") {
+      font-size: 15px;
+    }
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding: 2vw 0vw;
+    text-align: center;
+
+    @include respond-from("sm") {
+      padding: 2vw;
+    }
+
+    @include respond-from("md") {
+      text-align: left;
+      padding: 1vw 0vw;
+    }
+
+    @include respond-from("lg") {
+      padding: 1vw 0;
+    }
+  }
+
+  .fa-regular,
+  .fa-solid {
+    font-size: 5vw;
+
+    @include respond-from("sm") {
+      font-size: 2vw;
+    }
+
+    @include respond-from("md") {
+      font-size: 2vw;
+    }
+
+    @include respond-from("lg") {
+      font-size: 1vw;
+    }
+
+    @include respond-from("xl") {
+      font-size: 0.8vw;
+    }
+  }
+
+  .btn-yellow {
+    background-color: #F9D783;
+    border: 1px solid #F9D783;
+    color: #191919;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #191919;
+      border: 1px solid #191919;
+      color: #ffffff;
+    }
+  }
+
+  .btn-black {
+    background-color: #191919;
+    border: 1px solid #191919;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      border: 1px solid #191919;
+      color: #191919;
+    }
+  }
+
+  .btn-transperant {
+    background-color: transparent;
+    border: 1px solid #191919;
+    color: #191919;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #191919;
+      border: 1px solid #191919;
+      color: #ffffff;
+    }
+  }
+
+  .btn-transperant2 {
+    background-color: transparent;
+    border: 1px solid #191919;
+    color: #191919;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #191919;
+      border: 1px solid #191919;
+      color: #ffffff;
+    }
+  }
+
+  .play-button {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #191919;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: all 0.3s;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      background-color: #191919;
+      border: 1px solid #191919;
+      color: #ffffff;
+    }
+  }

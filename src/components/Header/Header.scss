@@ -1,0 +1,152 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+
+header {
+    background-color: #F0EFE9;
+    padding: 16px;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 70px;
+
+      @include respond-from("md") {
+        gap: 0px;
+      }
+
+      .menu-bars {
+        font-size: 25px;
+        border: none;
+        background-color: transparent;
+
+        @include respond-from("md") {
+          display: none;
+        }
+      }
+
+      .menu {
+        display: none;
+
+        @include respond-from("md") {
+          display: block;
+        }
+      }
+
+      .top-menu {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #DAD9D3;
+      }
+
+      .contact-information {
+        display: flex;
+
+      }
+
+      .main-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+
+        nav {
+          a {
+            display: inline-block;
+            color: #191919;
+            text-decoration: none;
+            margin-right: 35px;
+            position: relative;
+
+            &.active {
+              font-weight: 600;
+            }
+
+            &.active::after,
+            &:hover:after {
+              content: '';
+              font-weight: 500;
+              position: absolute;
+              height: 2px;
+              width: 15px;
+              background-color: #191919;
+              left: 50%;
+              bottom: -3px;
+              transform: translate((calc(50% - 15px)));
+
+            }
+          }
+        }
+      }
+
+      .btn-login {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+
+
+    .content-box {
+      padding-right: 30px;
+      margin-right: 30px;
+      border-right: 1px solid #DAD9D3;
+
+      i {
+        margin-right: 5px;
+        font-size: 3vw;
+
+        @include respond-from("md") {
+          font-size: 1.5vw;
+        }
+
+        @include respond-from("lg") {
+          font-size: 0.9vw;
+        }
+
+        @include respond-from("lg") {
+          font-size: 0.8vw;
+        }
+      }
+
+      &.last {
+        border: none;
+      }
+    }
+
+    .social-media {
+      a {
+        color: #191919;
+        font-size: 1.3rem;
+        margin-left: 10px;
+
+        &:hover {
+          color: #666666;
+        }
+      }
+    }
+  }

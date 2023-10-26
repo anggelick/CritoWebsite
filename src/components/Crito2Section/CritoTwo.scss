@@ -1,0 +1,233 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+.crito-2 {
+    .content {
+      .partnership-brands {
+        padding-top: 2vw;
+
+        @include respond-from("md") {
+          padding: 2vw 0 5vw 0;
+          display: grid;
+          justify-content: center;
+          grid-template-columns: auto auto auto auto auto;
+
+          @include respond-from("lg") {
+            padding: 3vw 0 3vw 0;
+          }
+
+          @include respond-from("xl") {
+            padding: 2vw 0 2vw 0;
+          }
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+
+        img {
+          width: 30%;
+
+          @include respond-from("sm") {
+            width: 15%;
+          }
+
+          @include respond-from("md") {
+            width: 100%;
+          }
+
+          @include respond-from("lg") {
+            width: 70%;
+          }
+        }
+      }
+
+      .partner-border {
+        @include respond-from("md") {
+          padding: 5vw 6.25vw 7vw;
+          max-width: 95vw;
+        }
+      }
+
+      .partnership-border {
+        @include respond-from("md") {
+          padding: 0vw;
+          padding-top: 0;
+        }
+      }
+
+      .partnership-section {
+        padding: 5vw;
+
+        @include respond-from("sm") {
+          padding: 4vw 4vw 4vw 4vw;
+        }
+
+        @include respond-from("md") {
+          display: flex;
+          margin: auto;
+          padding: 2vw;
+          max-width: 95vw;
+          border: 1px solid #DAD9D3;
+        }
+      }
+
+      .textarea-left {
+        @include respond-from("md") {
+          text-align: left;
+          width: 40%;
+          padding: 2vw;
+        }
+
+        @include respond-from("xl") {
+          width: 50%;
+        }
+
+        .center-button-group {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+
+          @include respond-from("sm") {
+            width: 50%;
+            margin: auto;
+          }
+
+          @include respond-from("md") {
+            margin: 0;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      .textarea-right {
+        padding-top: 10vw;
+
+        @include respond-from("sm") {
+          padding: 5vw;
+        }
+
+        @include respond-from("md") {
+          display: grid;
+          grid-template-columns: auto auto;
+          padding: 2vw;
+          width: 75%;
+          text-align: left;
+        }
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+
+          @include respond-from("sm") {
+            font-size: 3vw;
+          }
+
+          @include respond-from("md") {
+            font-size: 1.85vw;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          color: #191919;
+        }
+
+        .partnership-section-card {
+          padding: 2vw 2vw;
+
+          @include respond-from("md") {
+            padding: 2.5vw 1.875vw;
+            text-align: left;
+          }
+
+          svg {
+            height: 2.5vw;
+            width: 2.5vw;
+            padding-bottom: 1.5vw;
+          }
+        }
+      }
+    }
+
+    .partnership-section-mobile {
+      display: flex;
+      padding: 5vw 0vw;
+
+      @include respond-from("sm") {
+        padding: 2vw 0vw;
+      }
+
+      @include respond-from("md") {
+        display: block;
+        padding: 1vw 1vw;
+      }
+    }
+
+    .partnership-section-left {
+      border: 1px solid #DAD9D3;
+      padding: 5vw;
+
+      @include respond-from("md") {
+        border: none;
+        padding: 2vw;
+        width: 50%;
+      }
+
+      @include respond-from("lg") {
+        padding: 5vw;
+      }
+
+      .center-button-group {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .btn-yellow {
+        width: 100%;
+
+        @include respond-from("sm") {
+          width: 50%;
+        }
+
+        @include respond-from("md") {
+          width: 100%;
+        }
+
+        @include respond-from("lg") {
+          width: 70%;
+        }
+      }
+    }
+  }

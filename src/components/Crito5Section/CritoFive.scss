@@ -1,0 +1,162 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-5 {
+    padding-top: 10vw;
+    padding-bottom: 0vw;
+
+    @include respond-from("sm") {
+      padding-top: 5vw;
+    }
+
+    @include respond-from("md") {
+      padding-bottom: 5vw;
+    }
+
+    @include respond-from("lg") {
+      padding-top: 75px;
+      padding-bottom: 15px;
+    }
+
+    .flex-section {
+      @include respond-from("md") {
+        display: flex;
+      }
+
+      .picture {
+        background-color: #F0EFE9;
+        padding: 5vw;
+
+        @include respond-from("md") {
+          width: 50%;
+          padding: 0;
+          background-color: transparent;
+          margin-top: -12vw;
+
+          @include respond-from("lg") {
+            margin-top: -10vw;
+          }
+        }
+
+        .picture-background {
+          background-color: #F0EFE9;
+
+          @include respond-from("md") {
+            background-color: #F0EFE9;
+            padding: 17vw;
+            margin-left: -5vw;
+            margin-top: -22vw;
+            margin-right: -9vw;
+            position: relative;
+            z-index: -1;
+          }
+
+          @include respond-from("lg") {
+            margin-left: -5vw;
+            margin-top: -20vw;
+            margin-right: -12vw;
+            padding: 13vw;
+          }
+
+          @include respond-from("xl") {
+            margin-left: -5vw;
+            margin-top: -19vw;
+            margin-right: -25vw;
+            padding: 12vw;
+          }
+
+          @include respond-from("ret") {
+            margin-left: -4vw;
+            margin-top: -9vw;
+            margin-right: -30vw;
+            padding: 8vw;
+          }
+        }
+      }
+    }
+
+    .four-things-group {
+      @include respond-from("md") {
+        width: 50%;
+      }
+
+      .one-thing {
+        padding: 2vw;
+
+        @include respond-from("md") {
+          padding: 0;
+        }
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          text-align: left;
+
+          @include respond-from("sm") {
+            font-size: 3vw;
+            text-align: center;
+          }
+
+          @include respond-from("md") {
+            font-size: 1.85vw;
+            text-align: left;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          padding: 0;
+          color: #191919;
+          text-align: left;
+
+          @include respond-from("sm") {
+            margin-left: 60px;
+            text-align: center;
+          }
+
+          @include respond-from("md") {
+            text-align: left;
+          }
+
+          @include respond-from("lg") {
+            margin-left: 50px;
+          }
+        }
+      }
+
+      i {
+        border: 1px solid lightgray;
+        padding: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+    }
+  }

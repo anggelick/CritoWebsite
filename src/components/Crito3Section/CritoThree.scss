@@ -1,0 +1,235 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-3 {
+    @include respond-from("sm") {
+      padding-bottom: 5vw;
+    }
+
+    @include respond-from("lg") {
+      padding-bottom: 2vw;
+    }
+
+    @include respond-from("ret") {
+      padding-bottom: 0;
+    }
+
+    .container {
+      @include respond-from("sm") {
+        display: flex;
+      }
+
+      @include respond-from("md") {
+        padding: 2vw 5vw;
+        padding-bottom: 7vw;
+        padding-top: 5vw;
+      }
+
+      .text-area {
+        background: #BEEBFF;
+        padding: 5vw;
+        width: 80%;
+        z-index: 2;
+        margin-top: -25vw;
+        margin-left: 5vw;
+        position: relative;
+
+        @include respond-from("sm") {
+          margin-top: -18vw;
+        }
+
+        @include respond-from("md") {
+          padding: 3vw;
+          margin-left: -6vw;
+          margin-top: -13vw;
+        }
+
+        @include respond-from("lg") {
+          padding: 2vw;
+          margin-left: -6vw;
+          margin-top: -14vw;
+        }
+
+        @include respond-from("xl") {
+          padding: 1vw;
+          margin-left: -2vw;
+          margin-top: -9vw;
+        }
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+          font-family: 'DM Sans', sans-serif;
+          text-align: left;
+
+          @include respond-from("sm") {
+            font-size: 2.7vw;
+          }
+
+          @include respond-from("md") {
+            font-size: 2vw;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+
+          .orange {
+            color: #F94D1C;
+
+            @include respond-from("sm") {
+              font-size: 12px;
+            }
+          }
+        }
+
+        p {
+          font-style: italic;
+          padding-right: 15vw;
+          text-align: left;
+          font-size: 12px;
+
+          @include respond-from("sm") {
+            padding: 0;
+          }
+        }
+      }
+
+      .content-section-pic {
+        @include respond-from("sm") {
+          width: 50%;
+        }
+
+        @include respond-from("md") {
+          width: 40%;
+        }
+
+      }
+
+      .content {
+        @include respond-from("sm") {
+          width: 50%;
+        }
+
+        @include respond-from("md") {
+          width: 60%;
+        }
+
+      }
+    }
+
+    .picture {
+      z-index: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .company-box-left {
+      padding: 5vw;
+
+      @include respond-from("sm") {
+        text-align: left;
+        padding: 2vw;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      @include respond-from("lg") {
+        padding: 0px 0px;
+        padding-left: 60px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      p {
+        color: #191919;
+        text-align: left;
+
+        @include respond-from("md") {
+          padding: 1vw 2vw;
+        }
+
+        @include respond-from("lg") {
+          padding-bottom: 5vw;
+        }
+
+        @include respond-from("xl") {
+          padding-bottom: 15px;
+        }
+      }
+
+      h2 {
+        @include respond-from("sm") {
+          text-align: left;
+          padding: 2vw;
+        }
+
+        @include respond-from("md") {
+          padding: 0 2vw;
+        }
+      }
+
+      h5 {
+        @include respond-from("sm") {
+          text-align: left;
+          padding: 0 2vw;
+        }
+
+        @include respond-from("md") {
+          padding: 0 2vw;
+        }
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+
+        @include respond-from("sm") {
+          padding: 0 2vw;
+        }
+
+        @include respond-from("md") {
+          flex-direction: unset;
+          place-content: space-around;
+          padding: 0 2vw;
+        }
+      }
+
+      .play-button {
+        margin-top: 2vw;
+
+        @include respond-from("md") {
+          margin-top: 0;
+        }
+
+        i {
+          margin-right: 8px;
+        }
+      }
+    }
+  }

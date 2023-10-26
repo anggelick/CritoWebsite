@@ -1,0 +1,95 @@
+.crito-6 .container .text-area {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .crito-6 .container .text-area {
+    padding-top: 80px;
+  }
+}
+.crito-6 .container .text-area h5 {
+  text-align: center;
+}
+.crito-6 .container .text-area h2 {
+  text-align: center;
+}
+.crito-6 .container .project-and-cases {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .crito-6 .container .project-and-cases {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.crito-6 .container .project-and-cases .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  color: #191919;
+  text-decoration: none;
+}
+.crito-6 .container .project-and-cases .project img {
+  width: 100%;
+  height: auto;
+}
+.crito-6 .container .project-and-cases .project h3 {
+  font-size: 4vw;
+  font-weight: 700;
+  padding-top: 35px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #DAD9D3;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .crito-6 .container .project-and-cases .project h3 {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-6 .container .project-and-cases .project h3 {
+    font-size: 1.85vw;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-6 .container .project-and-cases .project h3 {
+    font-size: 16px;
+  }
+}
+.crito-6 .container .project-and-cases .project .readmore {
+  font-family: "Inter", sans-serif;
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  color: #191919;
+  text-decoration: none;
+  padding: 15px;
+}
+.crito-6 .container .project-and-cases .project i {
+  margin-left: 3px;
+}
+.crito-6 .container .project-and-cases .project:hover .readmore {
+  text-decoration: underline;
+}
+.crito-6 .container .center-button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vw;
+  padding-bottom: 15vw;
+}
+@media (min-width: 768px) {
+  .crito-6 .container .center-button-group {
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-6 .container .center-button-group {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
