@@ -1,0 +1,134 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+.signup-section {
+    background-color: #F0EFE9;
+    position: relative;
+
+    .container {
+      .signupform {
+        padding: 5vw;
+
+        input[type=text],
+        .input[type=submit] {
+          width: 100%;
+          padding: 15px 30px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #F0EFE9;
+          box-sizing: border-box;
+          border-radius: 25px;
+        }
+
+        input[type=checkbox] {
+          margin-top: 16px;
+        }
+
+        input[type=submit] {
+          background-color: #F9D783;
+          border: 1px solid #F9D783;
+          color: #191919;
+          text-decoration: none;
+          padding: 15px 30px;
+          font-weight: 500;
+          font-size: 16px;
+          border-radius: 25px;
+          transition: all 0.3s;
+
+          i {
+            margin-left: 8px;
+          }
+
+          &:hover {
+            background-color: #191919;
+            border: 1px solid #191919;
+            color: #ffffff;
+          }
+        }
+
+        input[type=submit]:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .signup-textarea {
+        @include respond-from("md") {
+          display: flex;
+          justify-content: space-around;
+          align-items: baseline;
+        }
+
+        .button-container {
+          padding-bottom: 5vw;
+
+          @include respond-from("md") {
+            padding-bottom: 0;
+          }
+        }
+
+        h2 {
+          padding-top: 2vw;
+        }
+      }
+
+      .header-picture-background {
+        position: absolute;
+        top: 70%;
+        left: 75%;
+        width: 25%;
+
+        @include respond-from("sm") {
+          top: 75%;
+          left: 86%;
+          width: 15%;
+        }
+
+        @include respond-from("md") {
+          top: 55%;
+          left: 93%;
+          width: 10%;
+        }
+
+        @include respond-from("lg") {
+          top: 50%;
+          left: 91%;
+          width: 10%;
+        }
+
+        @include respond-from("xl") {
+          left: 92%;
+        }
+
+        @include respond-from("ret") {
+          left: 91%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+  }

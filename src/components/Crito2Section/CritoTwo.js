@@ -1,3 +1,4 @@
+import Button from '../Generics/Button/Button';
 import './CritoTwo.css';
 import React from 'react'
 
@@ -19,8 +20,8 @@ const CritoTwo = () => {
               <h5>Features</h5>
               <h2>Our Accounting is trusted by thousand of companies</h2>
               <div className="center-button-group">
-                <a className="btn-yellow" href="consulting.html">Learn More <i
-                    className="fa-regular fa-arrow-up-right"></i></a>
+                <Button text="Learn More" url="/services" 
+                className="fa-regular fa-arrow-up-right" />
               </div>
             </div>
             <div className="textarea-right">

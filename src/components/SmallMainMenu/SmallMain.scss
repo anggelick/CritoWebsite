@@ -1,0 +1,129 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-contact-1 {
+    background-color: #F0EFE9;
+    padding-top: 5vw;
+    padding-bottom: 15vw;
+    position: relative;
+
+    @include respond-from("md") {
+      padding-bottom: 5vw;
+    }
+
+    .header-picture {
+      position: absolute;
+      top: 41%;
+      left: 0;
+
+      @include respond-from("sm") {
+        top: 10%;
+      }
+
+      @include respond-from("md") {
+        top: 30%;
+        width: 50%;
+      }
+
+      @include respond-from("lg") {
+        top: 25%;
+      }
+
+      @include respond-from("xl") {
+        top: 25%;
+      }
+
+      @include respond-from("ret") {
+        top: 19%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header-picture2 {
+      position: absolute;
+      top: 15%;
+      left: 0;
+
+      @include respond-from("sm") {
+        top: 10%;
+      }
+
+      @include respond-from("md") {
+        top: 17%;
+      }
+
+      @include respond-from("lg") {
+        top: 23%;
+      }
+
+      @include respond-from("xl") {
+        top: 24%;
+      }
+
+      @include respond-from("ret") {
+        top: 27%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .small-main-menu {
+      nav {
+        a {
+          display: inline-block;
+          color: #191919;
+          text-decoration: none;
+          margin-right: 35px;
+          position: relative;
+
+          &.active {
+            font-weight: 600;
+          }
+
+          &.active::after,
+          &:hover:after {
+            font-weight: 500;
+
+          }
+        }
+      }
+    }
+
+    .text-area {
+      h2 {
+        text-align: center;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 800;
+      }
+
+    }
+
+  }

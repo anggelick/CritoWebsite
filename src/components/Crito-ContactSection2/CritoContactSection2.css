@@ -1,0 +1,106 @@
+.crito-contact-2 {
+  background-color: #fff;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+@media (min-width: 992px) {
+  .crito-contact-2 {
+    padding-bottom: 5vw;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-contact-2 {
+    padding-top: 75px;
+  }
+}
+.crito-contact-2 h5,
+.crito-contact-2 h2 {
+  margin: 0px 15px 0px 15px;
+}
+@media (min-width: 992px) {
+  .crito-contact-2 .our-services-boxes {
+    display: flex;
+  }
+}
+.crito-contact-2 h3 {
+  font-size: 4vw;
+  font-weight: 700;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .crito-contact-2 h3 {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-contact-2 h3 {
+    font-size: 1.85vw;
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-contact-2 h3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .crito-contact-2 .box1,
+  .crito-contact-2 .box2,
+  .crito-contact-2 .box3 {
+    width: 33%;
+    padding: 3vw;
+    background: #fff;
+    border: 1px solid #DAD9D3;
+    margin: 0px 15px 0px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-contact-2 .box1,
+  .crito-contact-2 .box2,
+  .crito-contact-2 .box3 {
+    padding: 2vw;
+  }
+}
+.crito-contact-2 .box1 .round-arrow,
+.crito-contact-2 .box2 .round-arrow,
+.crito-contact-2 .box3 .round-arrow {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .crito-contact-2 .box1 .round-arrow,
+  .crito-contact-2 .box2 .round-arrow,
+  .crito-contact-2 .box3 .round-arrow {
+    text-align: left;
+  }
+}
+.crito-contact-2 .box1 .fa-solid,
+.crito-contact-2 .box2 .fa-solid,
+.crito-contact-2 .box3 .fa-solid {
+  font-size: 10vw;
+}
+@media (min-width: 768px) {
+  .crito-contact-2 .box1 .fa-solid,
+  .crito-contact-2 .box2 .fa-solid,
+  .crito-contact-2 .box3 .fa-solid {
+    font-size: 5vw;
+  }
+}
+@media (min-width: 992px) {
+  .crito-contact-2 .box1 .fa-solid,
+  .crito-contact-2 .box2 .fa-solid,
+  .crito-contact-2 .box3 .fa-solid {
+    font-size: 2vw;
+  }
+}
+@media (min-width: 1200px) {
+  .crito-contact-2 .box1 .fa-solid,
+  .crito-contact-2 .box2 .fa-solid,
+  .crito-contact-2 .box3 .fa-solid {
+    font-size: 45px;
+  }
+}

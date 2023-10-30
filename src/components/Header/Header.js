@@ -1,15 +1,15 @@
-import React from 'react'
-import critologo from '../../assets/images/Crito_logo_startpage.png'
-import CritoOne from '../Crito1Section/CritoOne'
+import './Header.css';
+import React from 'react';
+import critologo from '../../assets/images/Crito_logo_startpage.png';
+import Button from '../Generics/Button/Button';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
+
   return (
     <header>
-
-<div className="container">
-        <a href="index.html">
-        <img className="critologo" src={critologo} /></a>
-        <button className="menu-bars"><i className="menu-bars fa-solid fa-bars-staggered"></i></button>
+      <div className="container">
+        <Link to="/"><img src={critologo} alt="crito logotype"/></Link>
         <div className="menu">
           <div className="top-menu">
             <div className="contact-information">
@@ -35,18 +35,15 @@ const Header = () => {
           </div>
           <div className="main-menu">
             <nav>
-              <a className="active" href="home.html">Home</a>
-              <a href="services.html">Service</a>
-              <a href="news.html">News</a>
-              <a href="contact.html">Contact</a>
+              <NavLink to="/Home">Home</NavLink>
+              <NavLink to="/Services">Service</NavLink>
+              <NavLink to="/News">News</NavLink>
+              <NavLink to="/Contacts">Contact</NavLink>
             </nav>
-            <a className="btn-yellow btn-login" href="login.html">Log in <i className="fa-regular fa-arrow-up-right"></i></a>
+            <Button text="Log in" url="/login" />
           </div>
         </div>
       </div>
-
-
-
     </header>
   )
 }

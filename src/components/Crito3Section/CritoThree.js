@@ -1,6 +1,9 @@
 import './CritoThree.css';
 import React from 'react'
 import AboutCompanyPicture from '../../assets/images/crito_aboutcompany_picture.jpg'
+import ButtonBlack from '../Generics/Button/BlackButton';
+import Button from '../Generics/Button/Button';
+import ButtonTrans from '../Generics/Button/TransperantButton';
 
 const CritoThree = () => {
   return (
@@ -25,12 +28,9 @@ const CritoThree = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis esse quasi incidunt adipisci accusantium
                 libero provident voluptate amet.</p>
               <div className="button-group">
-                <button className="btn-black">
-                  Learn More <i className="fa-regular fa-arrow-up-right"></i>
-                </button>
-                <button className="play-button">
-                  <i className="fa-regular fa fa-play-circle"></i> Intro Video
-                </button>
+              <ButtonBlack text="Learn More" url="/services/consulting.html" 
+                className="btn-black" />
+                <ButtonTrans text="Intro Video" url="/services/video.html" className="play-button fa-regular fa fa-play-circle" />
               </div>
             </div>
           </div>

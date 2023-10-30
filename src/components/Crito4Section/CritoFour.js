@@ -1,7 +1,7 @@
 import './CritoFour.css';
 import React from 'react'
 import Critobackgroundpicture2 from '../../assets/images/Crito_background_picture2.svg'
-
+import ButtonTrans from '../Generics/Button/TransperantButton';
 const CritoFour = () => {
   return (
     <section className="crito-4">
@@ -71,8 +71,7 @@ const CritoFour = () => {
             </div>
           </div>
           <div className="center-button-group">
-            <a className="btn-transperant" href="projects.html">Browse Services <i
-                className="fa-regular fa-arrow-up-right"></i></a>
+          <ButtonTrans text="Browse Services" url="/projects.html" className="btn-transperant fa-regular fa-arrow-up-right" />
           </div>
         </div>
         <div className="header-background">

@@ -1,0 +1,45 @@
+.crito-contact-3 .container {
+  padding-bottom: 5vw;
+}
+.crito-contact-3 .container .content {
+  padding: 5vw;
+  background-color: #F0EFE9;
+  text-align: center;
+}
+.crito-contact-3 .container .content h2 {
+  text-align: center;
+}
+.crito-contact-3 .container .content .item.name_email {
+  display: flex;
+  flex-direction: column;
+}
+.crito-contact-3 .container .content .item {
+  display: flex;
+  flex-direction: column;
+}
+.crito-contact-3 .container .content .item textarea {
+  height: 100px;
+  resize: none;
+}
+.crito-contact-3 .container .content .item input[type=text], .crito-contact-3 .container .content .item input[type=email],
+.crito-contact-3 .container .content .item textarea {
+  width: 100%;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #000;
+  padding: 0 0 15px 0;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.crito-contact-3 .container .content .btn {
+  width: 100%;
+  padding-top: 2vw;
+}
+.crito-contact-3 .container .content .btn .btn-yellow {
+  width: 100%;
+}
+.crito-contact-3 .signup-location img {
+  width: 100%;
+}

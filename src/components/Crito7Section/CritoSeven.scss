@@ -1,0 +1,319 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-7 {
+    padding-bottom: 10vw;
+    padding-top: 10vw;
+    background-color: #F0D082;
+
+    @include respond-from("sm") {
+      padding-bottom: 5vw;
+      padding-top: 5vw;
+    }
+
+    .content {
+      .carousel {
+        padding-top: 15vw;
+        padding-bottom: 15vw;
+
+        @include respond-from("sm") {
+          padding-top: 0;
+          padding-bottom: 3vw;
+        }
+      }
+
+      .textarea {
+        @include respond-from("sm") {
+          padding-bottom: 5vw;
+        }
+
+        .center-button-group {
+          padding-top: 5vw;
+          text-align: center;
+
+          @include respond-from("md") {
+            padding-top: 0vw;
+            padding-bottom: 0;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: -8vw;
+          }
+
+          @include respond-from("lg") {
+            margin-top: -6vw;
+          }
+        }
+      }
+    }
+
+    .gallery-cell {
+      width: 100%;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F0D082 !important;
+
+      @include respond-from("sm") {
+        padding: 5vw 15vw;
+        background: #fff;
+        padding-top: 2vw;
+      }
+
+      @include respond-from("md") {
+        display: none;
+      }
+
+      .gallery-image {
+        padding: 5vw;
+        padding-bottom: 0;
+        padding-top: 0;
+        background-color: #F0D082;
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          text-align: left;
+
+          @include respond-from("sm") {
+            font-size: 3vw;
+          }
+
+          @include respond-from("md") {
+            font-size: 1.85vw;
+            text-align: left;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          padding: 0vw;
+          text-align: left;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .gallery-cell-dt {
+      width: 100%;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F0D082;
+
+      @include respond-from("md") {
+        padding: 3vw;
+        padding-top: 0;
+        padding-left: 0;
+      }
+
+      .gallery-image {
+        background-color: #F0D082;
+
+        @include respond-from("md") {
+          padding: 1vw;
+          padding-left: 0;
+        }
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          text-align: left;
+
+          @include respond-from("sm") {
+            font-size: 3vw;
+          }
+
+          @include respond-from("md") {
+            font-size: 1.85vw;
+            text-align: left;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+        }
+
+        p {
+          padding: 0vw;
+          text-align: left;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .carousel.is-fullscreen .gallery-cell-dt {
+      height: 100%;
+    }
+
+    .gallery-cell img {
+      display: block;
+      max-height: 100%;
+    }
+
+    .flickity-button,
+    .flickity-prev-next-button {
+      display: none;
+    }
+
+    .flickity-page-dots {
+      bottom: 30px;
+
+      @include respond-from("sm") {
+        bottom: 20px;
+      }
+
+      @include respond-from("md") {
+        bottom: 45px;
+      }
+
+      @include respond-from("lg") {
+        bottom: 45px;
+      }
+    }
+
+    .testimonial-box {
+      padding: 5vw;
+      background: #fff;
+
+      @include respond-from("lg") {
+        padding: 2vw;
+      }
+
+      .text-area {
+        text-align: center;
+
+        h2,
+        h5 {
+          text-align: center;
+        }
+      }
+
+      .our-services-boxes {
+        @include respond-from("md") {
+          display: flex;
+          justify-content: center;
+        }
+
+        .flex-section {
+          @include respond-from("md") {
+            display: flex;
+          }
+        }
+
+        p {
+          padding: 0;
+          text-align: left;
+
+          @include respond-from("lg") {
+            font-size: 13px;
+          }
+        }
+
+        .orange {
+          color: #F94D1C;
+          font-weight: 600;
+        }
+
+        h3 {
+          font-size: 4vw;
+          font-weight: 700;
+          padding-top: 0px;
+          padding-bottom: 0px;
+          text-align: left;
+
+          @include respond-from("sm") {
+            font-size: 3vw;
+          }
+
+          @include respond-from("md") {
+            font-size: 1.85vw;
+            text-align: left;
+          }
+
+          @include respond-from("lg") {
+            font-size: 16px;
+          }
+        }
+
+        .box1,
+        .box2,
+        .box3 {
+          width: 100%;
+          padding: 5vw;
+
+          @include respond-from("md") {
+            width: 33%;
+            padding: 1vw 3vw;
+          }
+        }
+
+        .star-image {
+          padding-bottom: 1vw;
+        }
+
+        .button-group {
+          @include respond-from("md") {
+            padding-bottom: 2vw;
+          }
+        }
+      }
+    }
+
+    .client-picture {
+      width: 100%;
+
+      @include respond-from("md") {
+        width: 33%;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .client {
+        padding: 10px;
+      }
+    }
+
+
+  }

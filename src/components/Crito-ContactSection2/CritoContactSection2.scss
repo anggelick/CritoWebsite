@@ -1,0 +1,115 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.crito-contact-2 {
+    background-color: #fff;
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+
+    @include respond-from("md") {
+      padding-bottom: 5vw;
+    }
+
+    @include respond-from("lg") {
+      padding-top: 75px;
+    }
+
+    h5,
+    h2 {
+      margin: 0px 15px 0px 15px;
+    }
+
+    .our-services-boxes {
+      @include respond-from("md") {
+        display: flex;
+      }
+    }
+
+    h3 {
+      font-size: 4vw;
+      font-weight: 700;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      text-align: center;
+
+      @include respond-from("sm") {
+        font-size: 3vw;
+      }
+
+      @include respond-from("md") {
+        font-size: 1.85vw;
+        text-align: left;
+      }
+
+      @include respond-from("lg") {
+        font-size: 16px;
+      }
+    }
+
+    .box1,
+    .box2,
+    .box3 {
+      @include respond-from("md") {
+        width: 33%;
+        padding: 3vw;
+        background: #fff;
+        border: 1px solid #DAD9D3;
+        margin: 0px 15px 0px 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      @include respond-from("lg") {
+        padding: 2vw;
+      }
+
+      .round-arrow {
+        text-align: center;
+
+        @include respond-from("md") {
+          text-align: left;
+        }
+      }
+
+      .fa-solid {
+        font-size: 10vw;
+
+        @include respond-from("sm") {
+          font-size: 5vw;
+        }
+
+        @include respond-from("md") {
+          font-size: 2vw;
+        }
+
+        @include respond-from("lg") {
+          font-size: 45px;
+        }
+
+      }
+    }
+  }

@@ -1,0 +1,218 @@
+$breakpoints: (
+    'xs': 375px,
+    'sp': 421px,
+    'sm': 768px,
+    'md': 992px,
+    'lg': 1200px,
+    'xl': 1600px,
+    'ret': 1920px
+) !default;
+
+@mixin respond-from($breakpoint) {
+  // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+footer {
+    height: 100vw;
+    background-color: #0E1021;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    @include respond-from("sm") {
+      height: 55vw;
+    }
+
+    @include respond-from("md") {
+      height: 32vw;
+    }
+
+    @include respond-from("lg") {
+      height: 25vw;
+    }
+
+    svg,
+    h3,
+    a,
+    p {
+      color: #fff;
+      font-size: 12px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .footer-maintext {
+      display: none !important;
+
+      @include respond-from("md") {
+        display: inline !important;
+        text-align: left;
+      }
+    }
+
+    .footer-links-container {
+      padding: 4vw 1vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr auto;
+      grid-gap: 2vw;
+      padding-bottom: 20vw;
+
+      @include respond-from("sm") {
+        padding: 4vw 1vw;
+      }
+
+      @include respond-from("md") {
+        grid-template-columns: 2fr 1fr 1fr 1fr auto;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+
+
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+
+        @include respond-from("md") {
+          justify-content: space-evenly;
+          align-items: flex-start;
+        }
+
+        &:last-child {
+          padding-right: 0vw;
+        }
+
+        h3 {
+          padding-bottom: 1vw;
+
+          @include respond-from("sm") {
+            padding-bottom: 0;
+          }
+        }
+
+        a {
+          line-height: 5.5vw;
+          text-decoration: none;
+          font-weight: 500;
+
+          @include respond-from("sm") {
+            line-height: 4.5vw;
+          }
+
+          @include respond-from("md") {
+            line-height: 1.5vw;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .copy-right {
+      height: 5vw;
+      border-top: #666666 1px solid;
+      padding: 0 1vw;
+
+      .copy-right-items {
+        @include respond-from("md") {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        svg {
+          padding-right: 1em;
+          cursor: pointer;
+
+
+          &:last-child {
+            padding-right: 0vw;
+          }
+
+          &:hover {
+            color: #f9d783;
+          }
+        }
+
+      }
+    }
+
+    .footer-social-media {
+      a {
+        color: #fff;
+        font-size: 1.3rem;
+        margin-left: 10px;
+
+        &:hover {
+          color: #666666;
+        }
+      }
+    }
+
+    .header-picture3 {
+      position: absolute;
+      top: 48%;
+      left: 40%;
+      width: 70%;
+
+      @include respond-from("sm") {
+        top: 45%;
+        left: 80%;
+        width: 20%;
+      }
+
+      @include respond-from("md") {
+        top: 49%;
+        left: 80%;
+        width: 20%;
+      }
+
+      @include respond-from("lg") {
+        top: 43%;
+        left: 81%;
+      }
+
+      @include respond-from("xl") {
+        top: 39%;
+      }
+
+      @include respond-from("ret") {
+        top: 35%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
