@@ -42,7 +42,7 @@ export default function Navbar() {
             <a href="/News">News</a>
           </li>
           <li>
-            <a href="/Contact">Contact</a>
+            <a href="/Contacts">Contact</a>
           </li>
         </ul>
       </div>

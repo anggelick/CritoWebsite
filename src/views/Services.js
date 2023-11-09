@@ -1,8 +1,9 @@
 import React from 'react'
+import NotFound from './NotFound'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <NotFound />
   )
 }
 
