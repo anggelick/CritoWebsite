@@ -58,7 +58,7 @@
   display: none;
 }
 .crito-4 .our-services-boxes .flickity-page-dots {
-  bottom: -35px;
+  bottom: -55px;
 }
 @media (min-width: 992px) {
   .crito-4 .text-area {
@@ -184,7 +184,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 15vw;
+  padding-top: 20vw;
   padding-bottom: 0vw;
 }
 @media (min-width: 768px) {

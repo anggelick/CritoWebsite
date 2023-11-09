@@ -78,9 +78,13 @@
     padding: 8vw;
   }
 }
+.crito-5 .four-things-group {
+  padding-bottom: 10vw;
+}
 @media (min-width: 992px) {
   .crito-5 .four-things-group {
     width: 50%;
+    padding-bottom: 0;
   }
 }
 .crito-5 .four-things-group .one-thing {

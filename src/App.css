@@ -13,6 +13,16 @@ html, body {
   color: #191919;
 }
 
+.text p {
+  text-align: center;
+  padding: 0;
+}
+
+.notfound-section {
+  padding-bottom: 5vw;
+padding-left: 5vw;
+}
+
 h1 {
   width: 100%;
   text-align: center;
@@ -120,7 +130,7 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   text-align: center;
-  padding: 2vw 0vw;
+  padding: 5vw 0vw;
   text-align: center;
 }
 @media (min-width: 768px) {

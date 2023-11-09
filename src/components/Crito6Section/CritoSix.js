@@ -39,7 +39,7 @@ const CritoSix = () => {
           </div>
         </div>
         <div className="center-button-group">
-        <ButtonBlack text="All Recent Projects" url="/projects.html" className="btn-black fa-regular fa-arrow-up-right" />
+        <ButtonBlack text="All Recent Projects" url="/news" className="btn-black fa-regular fa-arrow-up-right" />
         </div>
       </div>
     </section>

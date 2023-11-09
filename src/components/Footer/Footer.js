@@ -2,6 +2,7 @@ import './Footer.css';
 import React from 'react'
 import CritoFooterLogo from '../../assets/images/Crito_footer_logo.svg'
 import CritoBackgroundPicture3 from '../../assets/images/Crito_background_picture3.svg.svg'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -9,8 +10,7 @@ const Footer = () => {
       <div class="footer-links-container container">
         <div class="footer-maintext footer-content">
           <div class="footer-maintext-logo">
-            <a href="index.html">
-              <img src={CritoFooterLogo} alt="Logotype in footer section" /></a>
+            <Link to="/Home"> <img src={CritoFooterLogo} alt="Logotype in footer section" /></Link>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat

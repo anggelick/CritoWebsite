@@ -1,6 +1,12 @@
 import Button from '../Generics/Button/Button';
 import './CritoTwo.css';
 import React from 'react'
+import CritoLogo1 from '../../assets/images/Crito_logo-1.svg'
+import CritoLogo2 from '../../assets/images/Crito_logo_2.svg'
+import CritoLogo3 from '../../assets/images/Crito_logo_3.svg'
+import CritoLogo4 from '../../assets/images/Crito_logo_4.svg'
+import CritoLogo5 from '../../assets/images/Crito_logo_5.svg'
+
 
 const CritoTwo = () => {
   return (
@@ -8,11 +14,11 @@ const CritoTwo = () => {
     <div className="container">
       <div className="content">
         <div className="partnership-brands">
-          <img src="Crito_logo-1.svg" alt="" />
-          <img src="Crito_logo_2.svg" alt="" />
-          <img src="Crito_logo_3.svg" alt="" />
-          <img src="Crito_logo_4.svg" alt="" />
-          <img src="Crito_logo_5.svg" alt="" />
+          <img src={CritoLogo1} alt="logo" />
+          <img src={CritoLogo2} alt="logo" />
+          <img src={CritoLogo3} alt="logo" />
+          <img src={CritoLogo4} alt="logo" />
+          <img src={CritoLogo5} alt="logo" />
         </div>
         <div className="partnership-border">
           <div className="partnership-section">

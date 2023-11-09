@@ -34,6 +34,15 @@ $breakpoints: (
       padding-top: 5vw;
     }
 
+    .container{
+      padding-bottom: 20vw;
+      @include respond-from("md"){
+        padding-bottom: 5vw;
+
+      }
+
+    }
+
     .content {
       .carousel {
         padding-top: 15vw;
@@ -46,6 +55,7 @@ $breakpoints: (
       }
 
       .textarea {
+        padding-bottom: 15vw;
         @include respond-from("sm") {
           padding-bottom: 5vw;
         }
@@ -75,6 +85,7 @@ $breakpoints: (
       width: 100%;
       background: none;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       background-color: #F0D082 !important;
@@ -128,12 +139,14 @@ $breakpoints: (
     }
 
     .gallery-cell-dt {
+      @include respond-from("md"){
       width: 100%;
       background: none;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #F0D082;
+      }
 
       @include respond-from("md") {
         padding: 3vw;
@@ -190,33 +203,12 @@ $breakpoints: (
       max-height: 100%;
     }
 
-    .flickity-button,
-    .flickity-prev-next-button {
-      display: none;
-    }
-
-    .flickity-page-dots {
-      bottom: 30px;
-
-      @include respond-from("sm") {
-        bottom: 20px;
-      }
-
-      @include respond-from("md") {
-        bottom: 45px;
-      }
-
-      @include respond-from("lg") {
-        bottom: 45px;
-      }
-    }
-
     .testimonial-box {
       padding: 5vw;
       background: #fff;
 
       @include respond-from("lg") {
-        padding: 2vw;
+        background: none;
       }
 
       .text-area {
@@ -290,12 +282,22 @@ $breakpoints: (
         .star-image {
           padding-bottom: 1vw;
         }
+      }
+    }
 
-        .button-group {
-          @include respond-from("md") {
-            padding-bottom: 2vw;
-          }
-        }
+    .button-group {
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+      @include respond-from("md") {
+        padding-bottom: 2vw;
+        padding-top: 2vw;
+      }
+    }
+
+    .background-white{
+      background: #fff;
+      @include respond-from("md"){
+      padding: 5vw;
       }
     }
 

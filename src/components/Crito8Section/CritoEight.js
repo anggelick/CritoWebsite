@@ -14,7 +14,7 @@ const CritoEight = () => {
             <h5>Article & News</h5>
             <h2>Get Every Single Articles & News</h2>
             <div className="center-button-group">
-            <ButtonTrans text="Browse Articles" url="/services/articles.html" 
+            <ButtonTrans text="Browse Articles" url="/news/newsdetails" 
                 className="btn-transperant2 fa-regular fa-arrow-up-right" />
             </div>
           </div>

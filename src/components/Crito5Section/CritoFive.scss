@@ -99,8 +99,10 @@ $breakpoints: (
     }
 
     .four-things-group {
+      padding-bottom: 10vw;
       @include respond-from("md") {
         width: 50%;
+        padding-bottom: 0;
       }
 
       .one-thing {

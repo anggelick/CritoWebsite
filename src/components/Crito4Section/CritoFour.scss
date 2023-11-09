@@ -78,7 +78,7 @@ $breakpoints: (
       }
 
       .flickity-page-dots {
-        bottom: -35px;
+        bottom: -55px;
       }
     }
 
@@ -178,7 +178,7 @@ $breakpoints: (
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 15vw;
+      padding-top: 20vw;
       padding-bottom: 0vw;
 
       @include respond-from("sm") {

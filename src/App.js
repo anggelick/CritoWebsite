@@ -9,6 +9,7 @@ import CritoSeven from './components/Crito7Section/CritoSeven';
 import CritoEight from './components/Crito8Section/CritoEight';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import MobileMenu from './components/MobileMenu/MobileMenu';
 import SignUp from './components/SignUpSection/SignUp';
 import './index';
 
@@ -16,6 +17,7 @@ import './index';
 function App() {
   return (
     <div className="wrapper">
+      <MobileMenu />
       <Header />
       <CritoOne />
       <CritoTwo />

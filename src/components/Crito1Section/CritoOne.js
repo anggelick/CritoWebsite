@@ -3,6 +3,7 @@ import React from 'react'
 import CritoBackgroundPicture from '../../assets/images/Crito_background_picture.svg'
 import CritoHeader from '../../assets/images/Crito_header_image.svg'
 import Button from '../Generics/Button/Button';
+import ScrollToTop from "react-scroll-to-top";
 
 const CritoOne = () => {
   return (
@@ -10,6 +11,7 @@ const CritoOne = () => {
     <div className="container">
       <div className="content">
         <div className="text-area">
+        <ScrollToTop smooth color="#F9D783" />
           <h1>We Provide The<br/> Best Business <br/> Solutions</h1>
           <p>Establish your vision and value proposition and turn them into testable prototypes.</p>
           <div className="button-group">

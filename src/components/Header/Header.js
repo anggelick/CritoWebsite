@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <Link to="/"><img src={critologo} alt="crito logotype"/></Link>
+        <Link to="/Home"><img src={critologo} alt="crito logotype"/></Link>
         <div className="menu">
           <div className="top-menu">
             <div className="contact-information">

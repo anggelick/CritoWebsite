@@ -9,6 +9,14 @@
     padding-top: 5vw;
   }
 }
+.crito-7 .container {
+  padding-bottom: 20vw;
+}
+@media (min-width: 992px) {
+  .crito-7 .container {
+    padding-bottom: 5vw;
+  }
+}
 .crito-7 .content .carousel {
   padding-top: 15vw;
   padding-bottom: 15vw;
@@ -18,6 +26,9 @@
     padding-top: 0;
     padding-bottom: 3vw;
   }
+}
+.crito-7 .content .textarea {
+  padding-bottom: 15vw;
 }
 @media (min-width: 768px) {
   .crito-7 .content .textarea {
@@ -48,6 +59,7 @@
   width: 100%;
   background: none;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #F0D082 !important;
@@ -100,13 +112,15 @@
 .crito-7 .gallery-cell img {
   width: 100%;
 }
-.crito-7 .gallery-cell-dt {
-  width: 100%;
-  background: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #F0D082;
+@media (min-width: 992px) {
+  .crito-7 .gallery-cell-dt {
+    width: 100%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F0D082;
+  }
 }
 @media (min-width: 992px) {
   .crito-7 .gallery-cell-dt {
@@ -161,35 +175,13 @@
   display: block;
   max-height: 100%;
 }
-.crito-7 .flickity-button,
-.crito-7 .flickity-prev-next-button {
-  display: none;
-}
-.crito-7 .flickity-page-dots {
-  bottom: 30px;
-}
-@media (min-width: 768px) {
-  .crito-7 .flickity-page-dots {
-    bottom: 20px;
-  }
-}
-@media (min-width: 992px) {
-  .crito-7 .flickity-page-dots {
-    bottom: 45px;
-  }
-}
-@media (min-width: 1200px) {
-  .crito-7 .flickity-page-dots {
-    bottom: 45px;
-  }
-}
 .crito-7 .testimonial-box {
   padding: 5vw;
   background: #fff;
 }
 @media (min-width: 1200px) {
   .crito-7 .testimonial-box {
-    padding: 2vw;
+    background: none;
   }
 }
 .crito-7 .testimonial-box .text-area {
@@ -263,9 +255,22 @@
 .crito-7 .testimonial-box .our-services-boxes .star-image {
   padding-bottom: 1vw;
 }
+.crito-7 .button-group {
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
 @media (min-width: 992px) {
-  .crito-7 .testimonial-box .our-services-boxes .button-group {
+  .crito-7 .button-group {
     padding-bottom: 2vw;
+    padding-top: 2vw;
+  }
+}
+.crito-7 .background-white {
+  background: #fff;
+}
+@media (min-width: 992px) {
+  .crito-7 .background-white {
+    padding: 5vw;
   }
 }
 .crito-7 .client-picture {

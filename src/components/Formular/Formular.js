@@ -1,6 +1,5 @@
 import React from 'react'
 import './Formular.css'
-import CritoLocation from '../../assets/images/Crito_location_picture.png';
 import { useState } from 'react';
 
 

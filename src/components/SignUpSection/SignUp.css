@@ -40,11 +40,15 @@
 .signup-section .container .signupform input[type=submit]:hover {
   opacity: 0.8;
 }
+.signup-section .container .signup-textarea {
+  padding-bottom: 10vw;
+}
 @media (min-width: 992px) {
   .signup-section .container .signup-textarea {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+    padding-bottom: 0vw;
   }
 }
 .signup-section .container .signup-textarea .button-container {

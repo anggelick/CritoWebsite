@@ -74,10 +74,12 @@ $breakpoints: (
       }
 
       .signup-textarea {
+        padding-bottom: 10vw;
         @include respond-from("md") {
           display: flex;
           justify-content: space-around;
           align-items: baseline;
+          padding-bottom: 0vw;
         }
 
         .button-container {

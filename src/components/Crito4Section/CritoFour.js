@@ -71,7 +71,7 @@ const CritoFour = () => {
             </div>
           </div>
           <div className="center-button-group">
-          <ButtonTrans text="Browse Services" url="/projects.html" className="btn-transperant fa-regular fa-arrow-up-right" />
+          <ButtonTrans text="Browse Services" url="/services" className="btn-transperant fa-regular fa-arrow-up-right" />
           </div>
         </div>
         <div className="header-background">

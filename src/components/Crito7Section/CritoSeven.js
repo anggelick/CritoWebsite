@@ -1,14 +1,11 @@
 import './CritoSeven.css';
 import React from 'react'
-import critoTeam1Picture from '../../assets/images/crito_team1_picture.jpg'
-import critoTeam2Picture from '../../assets/images/crito_team2_picture.jpg'
-import critoTeam3Picture from '../../assets/images/crito_team3_picture.jpg'
-import critoTeam4Picture from '../../assets/images/crito_team4_picture.jpg'
 import critoStarReview from '../../assets/images/crito_star_review.svg'
 import critoCassandraPicture from '../../assets/images/Crito_Cassandra_picture.svg'
 import critoAmandaPicture from '../../assets/images/Crito_Amanda_picture.svg'
 import critoJackPicture from '../../assets/images/Crito_Jack_picture.svg'
 import ButtonBlack from '../Generics/Button/BlackButton';
+import FlickityCarousel from '../FlickityCarousel/FlickityCarousel';
 
 const CritoSeven = () => {
   return (
@@ -23,85 +20,11 @@ const CritoSeven = () => {
                   className="fa-regular fa-arrow-up-right"></i></a>
             </div>
           </div>
-          <div className="carousel visible-xs visible-sm slideshowElement" 
-            data-flickity="{ &quot;fullscreen&quot;: true,&quot;wrapAround&quot;: true }" />
-            <div className="gallery-cell">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam1Picture" src={critoTeam1Picture} alt="Chania" />
-                <h3>Kristine Palmer</h3>
-                <p>Chef Operation Officer</p>
-              </div>
-            </div>
-            <div className="gallery-cell">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam2Picture" src={critoTeam2Picture} alt="Chania" />
-                <h3>Mark Aubri</h3>
-                <p>Senior Consultant</p>
-              </div>
-            </div>
-            <div className="gallery-cell">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam3Picture" src={critoTeam3Picture} alt="Chania" />
-                <h3>Kimberly Hansen</h3>
-                <p>Senior Consultant</p>
-              </div>
-            </div>
-            <div className="gallery-cell">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam4Picture" src={critoTeam4Picture} alt="Chania" />
-                <h3>Justin Willoman</h3>
-                <p>Senior Tech Consultant</p>
-              </div>
-            </div>
+          < FlickityCarousel />
           </div>
-          <div className="carousel hidden-xs hidden-sm slideshowElement"
-            data-flickity="{ &quot;fullscreen&quot;: true,&quot;wrapAround&quot;: true }"/>
-            <div className="gallery-cell-dt">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam1Picture" src={critoTeam1Picture} alt="Chania"/>
-                <h3>Kristine Palmer</h3>
-                <p>Chef Operation Officer</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam2Picture" src={critoTeam2Picture} alt="Chania"/>
-                <h3>Mark Aubri</h3>
-                <p>Senior Consultant</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam3Picture" src={critoTeam3Picture} alt="Chania"/>
-                <h3>Kimberly Hansen</h3>
-                <p>Senior Consultant</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam4Picture" src={critoTeam4Picture} alt="Chania"/>
-                <h3>Justin Willoman</h3>
-                <p>Senior Tech Consultant</p>
-              </div>
-            </div>
-            <div className="gallery-cell-dt">
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam1Picture" src={critoTeam1Picture} alt="Chania"/>
-                <h3>Kristine Palmer</h3>
-                <p>Chef Operation Officer</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam2Picture" src={critoTeam2Picture} alt="Chania"/>
-                <h3>Mark Aubri</h3>
-                <p>Senior Consultant</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam3Picture" src={critoTeam3Picture} alt="Chania"/>
-                <h3>Kimberly Hansen</h3>
-                <p>Senior Consultant</p>
-              </div>
-              <div className="gallery-image">
-                <img className="img-responsive critoTeam4Picture" src={critoTeam4Picture} alt="Chania"/>
-                <h3>Justin Willoman</h3>
-                <p>Senior Tech Consultant</p>
-              </div>
-            </div>
           </div>
           <div className="testimonial-box">
+            <div className="background-white">
             <div className="text-area">
               <h5>Testimonial</h5>
               <h2>What Our Client Says</h2>
@@ -160,6 +83,7 @@ const CritoSeven = () => {
             <ButtonBlack text="All Reviews" url="/services/reviews.html" 
                 className="btn-black fa-regular fa-arrow-up-right" />
             </div>
+          </div>
           </div>
     </section>
   )
